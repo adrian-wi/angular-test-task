@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="App">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Łukasz Jarosz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="distribution" content="global" />
+
+    <title>Wyszukiwarka</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="kontroler.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body ng-controller="TodoCtrl">
+
+    <div class="Container">
+        <label>Szukaj:</label>
+        <input type="text" ng-model="searchText" placeholder="Enter a name here">
+
+        <ul>
+            <li ng-repeat="nazwa in wyniki.users | filter:searchText">
+                {{nazwa.name}}
+
+            </li>
+        </ul>
+
+        <ul>
+            <li ng-repeat="wynik in posty | filter:{ userId:dobreid}:true">
+                <a href="user.html?userid={{wynik.userId}}&id={{wynik.id}}">{{wynik.title}}</a>
+
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="App">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Łukasz Jarosz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="distribution" content="global" />
+
+    <title>Wyszukiwarka - Użytkownik</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="kontroler.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body ng-controller="TodoCtrl">
+
+    <div class="Container">
+
+        <ul>
+            <li>
+                {{useridname}}<br /><br />{{tytul}}<br /><br />{{tekst}}
+
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>
